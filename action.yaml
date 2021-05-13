@@ -1,0 +1,14 @@
+
+name: 'Speccy OpenAPI linter'
+description: 'lint an openapi spec using speccy'
+author: 'Contiamo GmbH'
+inputs:
+  path:
+    description: 'Path to the OpenAPI file'
+    required: false
+    default: 'api.yaml'
+runs:
+  using: 'docker'
+  image: "Dockerfile"
+  args:
+    - '${{ inputs.path }}'
