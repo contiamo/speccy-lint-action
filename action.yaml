@@ -8,7 +8,5 @@ inputs:
     required: false
     default: 'api.yaml'
 runs:
-  using: 'docker'
-  image: "Dockerfile"
-  args:
-    - '${{ inputs.path }}'
+  using: 'node12'
+  main: 'dist/index.js'
